@@ -11,10 +11,10 @@ import (
 	"strings"
 
 	"github.com/asdine/storm"
-	"github.com/hacdias/filemanager"
-	"github.com/hacdias/filemanager/bolt"
-	"github.com/hacdias/filemanager/staticgen"
-	"github.com/hacdias/fileutils"
+	"github.com/kikiyou/filemanager"
+	"github.com/kikiyou/filemanager/bolt"
+	"github.com/kikiyou/filemanager/staticgen"
+	"github.com/kikiyou/fileutils"
 	"github.com/mholt/caddy"
 	"github.com/mholt/caddy/caddyhttp/httpserver"
 )

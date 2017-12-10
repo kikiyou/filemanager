@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	fm "github.com/hacdias/filemanager"
+	fm "github.com/kikiyou/filemanager"
 )
 
 // Jekyll is the Jekyll static website generator.

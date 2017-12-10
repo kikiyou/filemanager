@@ -10,8 +10,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	fm "github.com/hacdias/filemanager"
-	"github.com/hacdias/varutils"
+	fm "github.com/kikiyou/filemanager"
+	"github.com/kikiyou/varutils"
 )
 
 var (

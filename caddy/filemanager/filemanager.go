@@ -6,9 +6,9 @@ package filemanager
 import (
 	"net/http"
 
-	"github.com/hacdias/filemanager"
-	"github.com/hacdias/filemanager/caddy/parser"
-	h "github.com/hacdias/filemanager/http"
+	"github.com/kikiyou/filemanager"
+	"github.com/kikiyou/filemanager/caddy/parser"
+	h "github.com/kikiyou/filemanager/http"
 	"github.com/mholt/caddy"
 	"github.com/mholt/caddy/caddyhttp/httpserver"
 )
