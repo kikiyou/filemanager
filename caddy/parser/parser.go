@@ -30,7 +30,7 @@ func Parse(c *caddy.Controller, plugin string) ([]*filemanager.FileManager, erro
 
 	for c.Next() {
 		u := &filemanager.User{
-			Locale:        "en",
+			Locale:        "zh-cn",
 			AllowCommands: true,
 			AllowEdit:     true,
 			AllowNew:      true,

@@ -5,7 +5,7 @@
         <i class="material-icons">menu</i>
       </button>
       <img src="../assets/logo.svg" alt="File Manager">
-      <search></search>
+      <!-- search></search -->
     </div>
     <div>
       <button @click="openSearch" :aria-label="$t('buttons.search')" :title="$t('buttons.search')" class="search-button action">
@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import Search from './Search'
+// import Search from './Search'
 import InfoButton from './buttons/Info'
 import DeleteButton from './buttons/Delete'
 import RenameButton from './buttons/Rename'
@@ -84,7 +84,7 @@ import buttons from '@/utils/buttons'
 export default {
   name: 'main',
   components: {
-    Search,
+    // Search,
     InfoButton,
     DeleteButton,
     ShareButton,

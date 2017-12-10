@@ -4,7 +4,7 @@
       <div v-bind:style="{ width: $store.state.progress + '%' }"></div>
     </div>
     <site-header></site-header>
-    <sidebar></sidebar>
+    <!-- sidebar></sidebar -->
     <main>
       <router-view @css="$emit('update:css')"></router-view>
     </main>
@@ -13,16 +13,16 @@
 </template>
 
 <script>
-import Search from '@/components/Search'
-import Sidebar from '@/components/Sidebar'
+// import Search from '@/components/Search'
+// import Sidebar from '@/components/Sidebar'
 import Prompts from '@/components/prompts/Prompts'
 import SiteHeader from '@/components/Header'
 
 export default {
   name: 'layout',
   components: {
-    Search,
-    Sidebar,
+    // Search,
+    // Sidebar,
     SiteHeader,
     Prompts
   },
