@@ -38,7 +38,7 @@ export function detectLocale () {
       locale = 'es'
       break
     default:
-      locale = 'zh-cn'
+      locale = 'en'
   }
 
   return locale
@@ -46,7 +46,7 @@ export function detectLocale () {
 
 const i18n = new VueI18n({
   locale: detectLocale(),
-  fallbackLocale: 'zh-cn',
+  fallbackLocale: 'en',
   messages: {
     'en': en,
     'fr': fr,
