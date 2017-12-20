@@ -48,19 +48,28 @@ func serve(c *fm.Context, w http.ResponseWriter, r *http.Request) (int, error) {
 
 	r.URL.Path = p
 
-	// 强制状态码是200
-	w.WriteHeader(200)
+	// // 强制状态码是200
+	// w.WriteHeader(200)
 
 	// Check if this request is made to the service worker. If so,
 	// pass it through a template to add the needed variables.
-	if r.URL.Path == "/filemanager/sw.js" {
+	// if r.URL.Path == "/filemanager/sw.js" {
+	// 	return renderFile(c, w, "sw.js")
+	// }
+	if r.URL.Path == "/sw.js" {
 		return renderFile(c, w, "sw.js")
 	}
-
 	// Checks if this request is made to the static assets folder. If so, and
 	// if it is a GET request, returns with the asset. Otherwise, returns
 	// a status not implemented.
-	if matchURL(r.URL.Path, "/filemanager/static") {
+	// if matchURL(r.URL.Path, "/filemanager/static") {
+	// 	if r.Method != http.MethodGet {
+	// 		return http.StatusNotImplemented, nil
+	// 	}
+
+	// 	return staticHandler(c, w, r)
+	// }
+	if matchURL(r.URL.Path, "/static") {
 		if r.Method != http.MethodGet {
 			return http.StatusNotImplemented, nil
 		}
@@ -70,8 +79,8 @@ func serve(c *fm.Context, w http.ResponseWriter, r *http.Request) (int, error) {
 
 	// Checks if this request is made to the API and directs to the
 	// API handler if so.
-	if matchURL(r.URL.Path, "/filemanager/api") {
-		r.URL.Path = strings.TrimPrefix(r.URL.Path, "/filemanager/api")
+	if matchURL(r.URL.Path, "/api") {
+		r.URL.Path = strings.TrimPrefix(r.URL.Path, "/api")
 		return apiHandler(c, w, r)
 	}
 
@@ -97,12 +106,12 @@ func serve(c *fm.Context, w http.ResponseWriter, r *http.Request) (int, error) {
 
 // staticHandler handles the static assets path.
 func staticHandler(c *fm.Context, w http.ResponseWriter, r *http.Request) (int, error) {
-	if r.URL.Path != "/filemanager/static/manifest.json" {
+	if r.URL.Path != "/static/manifest.json" {
 		http.FileServer(c.Assets.HTTPBox()).ServeHTTP(w, r)
 		return 0, nil
 	}
 
-	return renderFile(c, w, "/filemanager/static/manifest.json")
+	return renderFile(c, w, "/static/manifest.json")
 }
 
 // apiHandler is the main entry point for the /api endpoint.

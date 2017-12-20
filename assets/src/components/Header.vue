@@ -1,6 +1,9 @@
 <template>
   <header>
-    <div>
+      <!-- div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+      </div -->
+      <div>
       <button @click="openSidebar" :aria-label="$t('buttons.toggleSidebar')" :title="$t('buttons.toggleSidebar')" class="action">
         <i class="material-icons">menu</i>
       </button>

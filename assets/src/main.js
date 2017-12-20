@@ -5,7 +5,20 @@ import router from './router'
 import i18n from './i18n'
 import Noty from 'noty'
 
-Vue.config.productionTip = true
+// 引入INSPINIA所需文件，css不并入app.js会统一打包到style.css
+require('@/assets/admin/css/bootstrap.css')
+require('@/assets/admin/font-awesome/css/font-awesome.min.css')
+require('@/assets/admin/css/animate.css')
+require('@/assets/admin/css/style.css')
+require('@/assets/admin/js/jquery-3.1.1.min.js')
+require('@/assets/admin/js/bootstrap.min.js')
+require('@/assets/admin/js/plugins/metisMenu/jquery.metisMenu.js')
+require('@/assets/admin/js/plugins/slimscroll/jquery.slimscroll.min.js')
+require('@/assets/admin/js/inspinia.js')
+require('@/assets/admin/js/plugins/pace/pace.min.js')
+
+
+// Vue.config.productionTip = true
 
 const notyDefault = {
   type: 'info',
@@ -42,6 +55,8 @@ Vue.prototype.$showError = function (error) {
 
   n.show()
 }
+
+Vue.config.devtools = true
 
 /* eslint-disable no-new */
 new Vue({

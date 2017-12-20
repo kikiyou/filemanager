@@ -1,90 +1,53 @@
 <template>
-  <nav :class="{active}">
-    <router-link class="action" to="/files/" :aria-label="$t('sidebar.myFiles')" :title="$t('sidebar.myFiles')">
-      <i class="material-icons">folder</i>
-      <span>{{ $t('sidebar.myFiles') }}</span>
-    </router-link>
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">admin</strong>
+                         </span> <span class="text-muted text-xs block">管理 <b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="#">注销</a></li>
+                        </ul>
+                </div>
+                <div class="logo-element">
+                    烽
+                </div>
+            </li>
+                <li class="active">
+                    <a href="/index"><i class="fa fa-th-large"></i> <span class="nav-label">首页</span></a>
+                </li>
+                <li>
+                    <a href="dash"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">运维之眼</span><span class="fa arrow"></span></a>
+                </li>
+                <li>
+                    <a href="/upload"><i class="fa fa-upload"></i> <span class="nav-label">多文件上传</span><span class="fa arrow"></span></a>
+                </li>
+                <li>
+                    <a href="/public"><i class="fa fa-download"></i> <span class="nav-label">下载文件</span><span class="fa arrow"></span></a>
+                </li>
+        </ul>
 
-    <div v-if="user.allowNew">
-      <button @click="$store.commit('showHover', 'newDir')" class="action" :aria-label="$t('sidebar.newFolder')" :title="$t('sidebar.newFolder')">
-        <i class="material-icons">create_new_folder</i>
-        <span>{{ $t('sidebar.newFolder') }}</span>
-      </button>
-
-      <button @click="$store.commit('showHover', 'newFile')" class="action" :aria-label="$t('sidebar.newFile')" :title="$t('sidebar.newFile')">
-        <i class="material-icons">note_add</i>
-        <span>{{ $t('sidebar.newFile') }}</span>
-      </button>
     </div>
-
-    <div v-if="staticGen.length > 0">
-      <router-link to="/files/settings"
-        :aria-label="$t('sidebar.siteSettings')"
-        :title="$t('sidebar.siteSettings')"
-        class="action">
-        <i class="material-icons">settings</i>
-        <span>{{ $t('sidebar.siteSettings') }}</span>
-      </router-link>
-
-      <template v-if="staticGen === 'hugo'">
-        <button class="action"
-          :aria-label="$t('sidebar.hugoNew')"
-          :title="$t('sidebar.hugoNew')"
-          v-if="user.allowNew"
-          @click="$store.commit('showHover', 'new-archetype')">
-          <i class="material-icons">merge_type</i>
-          <span>{{ $t('sidebar.hugoNew') }}</span>
-        </button>
-      </template>
-
-      <button class="action"
-        :aria-label="$t('sidebar.preview')"
-        :title="$t('sidebar.preview')"
-        @click="preview">
-        <i class="material-icons">remove_red_eye</i>
-        <span>{{ $t('sidebar.preview') }}</span>
-      </button>
-    </div>
-
-    <div v-if="!$store.state.noAuth">
-      <router-link class="action" to="/settings" :aria-label="$t('sidebar.settings')" :title="$t('sidebar.settings')">
-        <i class="material-icons">settings_applications</i>
-        <span>{{ $t('sidebar.settings') }}</span>
-      </router-link>
-
-      <button @click="logout" class="action" id="logout" :aria-label="$t('sidebar.logout')" :title="$t('sidebar.logout')">
-        <i class="material-icons">exit_to_app</i>
-        <span>{{ $t('sidebar.logout') }}</span>
-      </button>
-    </div>
-
-    <p class="credits">
-      <span><a rel="noopener noreferrer" href="https://github.com/hacdias/filemanager">File Manager</a> v{{ version }}</span>
-      <span><a @click="help">{{ $t('sidebar.help') }}</a></span>
-    </p>
-  </nav>
+</nav>
 </template>
 
 <script>
-import {mapState} from 'vuex'
-import auth from '@/utils/auth'
-
 export default {
   name: 'sidebar',
   computed: {
-    ...mapState(['user', 'staticGen', 'version']),
+    // ...mapState(['user', 'staticGen', 'version']),
     active () {
       return this.$store.state.show === 'sidebar'
     }
   },
-  methods: {
-    help () {
-      this.$store.commit('showHover', 'help')
-    },
-    preview () {
-      window.open(this.$store.state.baseURL + '/preview/')
-    },
-    logout: auth.logout
+  data () {
+    return {}
   }
 }
 </script>
+
+<style>
+
+</style>
