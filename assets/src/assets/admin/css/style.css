@@ -1,10 +1,66 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/Open-Sans/Open-Sans-Light.woff2) format('woff2'), url(../fonts/Open-Sans/Open-Sans-Light.woff) format('woff'), url(../fonts/Open-Sans/Open-Sans-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Open-Sans/Open-Sans.eot);
+    src: local('Open Sans'), local('Open Sans Regular'), local('OpenSans-Regular'), url(../fonts/Open-Sans/Open-Sans.eot?#iefix) format('embedded-opentype'), url(../fonts/Open-Sans/Open-Sans.woff2) format('woff2'), url(../fonts/Open-Sans/Open-Sans.woff) format('woff'), url(../fonts/Open-Sans/Open-Sans.ttf) format('truetype'), url(../fonts/Open-Sans/Open-Sans.svg#OpenSans) format('svg');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(../fonts/Open-Sans/Open-Sans-SemiBold.woff2) format('woff2'), url(../fonts/Open-Sans/Open-Sans-SemiBold.woff) format('woff'), url(../fonts/Open-Sans/Open-Sans-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/Open-Sans/Open-Sans-Bold.woff2) format('woff2'), url(../fonts/Open-Sans/Open-Sans-Bold.woff) format('woff'), url(../fonts/Open-Sans/Open-Sans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(../fonts/Roboto/Roboto-Light.ttf) format('truetype'), url(../fonts/Roboto/Roboto-Light.woff) format('woff'), url(../fonts/Roboto/Roboto-Light.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Roboto/Roboto.eot);
+    src: local('Roboto'), local('Roboto-Regular'), url(../fonts/Roboto/Roboto.ttf) format('truetype'), url(../fonts/Roboto/Roboto.woff) format('woff'), url(../fonts/Roboto/Roboto.eot?#iefix) format('embedded-opentype'), url(../fonts/Roboto/Roboto.svg#Roboto) format('svg'), url(../fonts/Roboto/Roboto.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Roboto Medium'), local('Roboto-Medium'), url(../fonts/Roboto/Roboto-Medium.ttf) format('truetype'), url(../fonts/Roboto/Roboto-Medium.woff) format('woff'), url(../fonts/Roboto/Roboto-Medium.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(../fonts/Roboto/Roboto-Bold.ttf) format('truetype'), url(../fonts/Roboto/Roboto-Bold.woff) format('woff'), url(../fonts/Roboto/Roboto-Bold.woff2) format('woff2');
+}
+
 
 /*
  *
  *   INSPINIA - Responsive Admin Theme
- *   version 2.7.1
+ *   version 2.7
  *
 */
 
@@ -658,7 +714,7 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
     color: #1ab394;
 }
 
-.top-navigation .navbar .nav>li.active {
+.top-navigation .nav>li.active {
     background: #fff;
     border: none;
 }
@@ -1280,14 +1336,10 @@ button.dim:active:before {
     background-color: #d1dade;
     color: #5e5e5e;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10px;
     font-weight: 600;
     padding: 3px 8px;
     text-shadow: none;
-}
-
-.nav .label,
-.ibox .label {
-    font-size: 10px;
 }
 
 .badge {
@@ -2293,6 +2345,7 @@ div.dt-button-info {
     padding: 6px 12px;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
     width: 100%;
+    font-size: 14px;
 }
 
 .form-control:focus,
@@ -4216,11 +4269,6 @@ body.tour-open .animated {
 
 .sidebar-container .sidebar-message {
     padding: 15px 20px;
-}
-
-.sidebar-container .sidebar-message .media-body {
-    display: block;
-    width: auto;
 }
 
 .sidebar-container .sidebar-message .message-avatar {
@@ -10316,10 +10364,6 @@ body.md-skin {
     background: #ffffff;
 }
 
-.md-skin.fixed-nav #side-menu {
-    background-color: #fff;
-}
-
 .md-skin.fixed-nav #wrapper.top-navigation #page-wrapper {
     margin-top: 0;
 }
@@ -10357,7 +10401,7 @@ body.md-skin {
     #page-wrapper {
         position: inherit;
         margin: 0 0 0 220px;
-        min-height: 100vh;
+        min-height: 1200px;
     }
     .navbar-static-side {
         z-index: 2001;
@@ -10375,7 +10419,7 @@ body.md-skin {
     #page-wrapper {
         position: inherit;
         margin: 0 0 0 0;
-        min-height: 100vh;
+        min-height: 1000px;
     }
     .body-small .navbar-static-side {
         display: none;
