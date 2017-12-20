@@ -53,9 +53,6 @@ func serve(c *fm.Context, w http.ResponseWriter, r *http.Request) (int, error) {
 
 	// Check if this request is made to the service worker. If so,
 	// pass it through a template to add the needed variables.
-	if r.URL.Path == "/filemanager/sw.js" {
-		return renderFile(c, w, "sw.js")
-	}
 
 	// Checks if this request is made to the static assets folder. If so, and
 	// if it is a GET request, returns with the asset. Otherwise, returns
