@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="gray-bg  wrapper wrapper-content  fadeInRight">
     <div id="breadcrumbs">
       <router-link to="/files/" :aria-label="$t('files.home')" :title="$t('files.home')">
         <i class="material-icons">home</i>
