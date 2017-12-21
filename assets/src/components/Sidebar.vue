@@ -18,9 +18,6 @@
                     <li>
                         <a href="/"><i class="fa fa-th-large"></i> <span class="nav-label">首页</span></a>
                     </li>
-                    <li>
-                        <a href="dash"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">运维之眼</span><span class="fa arrow"></span></a>
-                    </li>
                     <li class="active">
                         <a href="/filemanager"><i class="fa fa-cloud"></i> <span class="nav-label">文件管理</span><span class="fa arrow"></span></a>
                     </li>

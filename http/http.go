@@ -99,7 +99,7 @@ func staticHandler(c *fm.Context, w http.ResponseWriter, r *http.Request) (int, 
 		return 0, nil
 	}
 
-	return renderFile(c, w, "/filemanager/static/manifest.json")
+	return renderFile(c, w, "filemanager/static/manifest.json")
 }
 
 // apiHandler is the main entry point for the /api endpoint.
