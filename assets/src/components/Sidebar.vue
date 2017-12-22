@@ -22,10 +22,10 @@
                         <a href="/filemanager"><i class="fa fa-cloud"></i> <span class="nav-label">文件管理</span><span class="fa arrow"></span></a>
                     </li>
                     <li>
-                        <a href="/upload"><i class="fa fa-upload"></i> <span class="nav-label">多文件上传</span><span class="fa arrow"></span></a>
+                        <a href="/upload"><i class="fa fa-upload"></i> <span class="nav-label">文件上传</span><span class="fa arrow"></span></a>
                     </li>
                     <li>
-                        <a href="/public"><i class="fa fa-download"></i> <span class="nav-label">下载文件</span><span class="fa arrow"></span></a>
+                        <a href="/public"><i class="fa fa-download"></i> <span class="nav-label">文件下载</span><span class="fa arrow"></span></a>
                     </li>
             </ul>
 
