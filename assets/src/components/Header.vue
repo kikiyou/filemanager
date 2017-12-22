@@ -1,9 +1,9 @@
 <template>
   <header>
-    <div>
       <!-- div class="navbar-header">
             <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
       </div -->
+      <div>
         <ul class="nav navbar-top-links navbar-right">
             <li>
                 <a href="/u/logout">
@@ -15,7 +15,7 @@
         <i class="material-icons">search</i>
       </button>
 
-      <button v-show="showSaveButton" :aria-label="$t('buttons.save')" :title="$t('buttons.save')" class="action" id="save-button">
+      <button v-show="showSaveButton" :aria-label="$t('buttons.save')" :title="$t('buttons.save')" class="btn btn-danger btn-sm btn-lg" id="save-button">
         <i class="material-icons">save</i>
       </button>
 
