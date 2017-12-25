@@ -19,13 +19,16 @@
                         <a href="/"><i class="fa fa-th-large"></i> <span class="nav-label">首页</span></a>
                     </li>
                     <li class="active">
-                        <a href="/filemanager"><i class="fa fa-cloud"></i> <span class="nav-label">文件管理</span><span class="fa arrow"></span></a>
+                        <a href="filemanager"><i class="fa fa-cloud"></i> <span class="nav-label">文件管理</span><span class="fa arrow"></span></a>
                     </li>
                     <li>
                         <a href="/upload"><i class="fa fa-upload"></i> <span class="nav-label">文件上传</span><span class="fa arrow"></span></a>
                     </li>
                     <li>
                         <a href="/public"><i class="fa fa-download"></i> <span class="nav-label">文件下载</span><span class="fa arrow"></span></a>
+                    </li>
+                    <li>
+                        <a href="webshell"><i class="fa fa-laptop"></i> <span class="nav-label">网页终端</span><span class="fa arrow"></span></a>
                     </li>
             </ul>
 
