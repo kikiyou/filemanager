@@ -32,7 +32,6 @@
       <!-- Menu that shows on listing AND mobile when there are files selected -->
       <div id="file-selection" v-if="isMobile && req.kind === 'listing'">
         <span v-if="selectedCount > 0">{{ selectedCount }} selected</span>
-        <share-button v-show="showRenameButton"></share-button>
         <rename-button v-show="showRenameButton"></rename-button>
         <copy-button v-show="showMoveButton"></copy-button>
         <move-button v-show="showMoveButton"></move-button>

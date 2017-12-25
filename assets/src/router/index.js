@@ -18,7 +18,7 @@ Vue.use(Router)
 
 const router = new Router({
   base: document.querySelector('meta[name="base"]').getAttribute('content'),
-  mode: 'history',
+  mode: 'hash',
   routes: [
     {
       path: '/login',
