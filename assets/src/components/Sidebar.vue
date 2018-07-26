@@ -30,6 +30,9 @@
                     <li>
                         <a href="/public"><i class="fa fa-download"></i> <span class="nav-label">文件下载</span><span class="fa arrow"></span></a>
                     </li>
+                    <li>
+                        <a href="webshell"><i class="fa fa-laptop"></i> <span class="nav-label">网页终端</span><span class="fa arrow"></span></a>
+                    </li>
             </ul>
 
         </div>
